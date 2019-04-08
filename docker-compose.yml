@@ -7,6 +7,14 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: myDatabase
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - ./pg-data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5433:5433" # default port is "5432:5432"
+    expose:
+      - 5433 # you can connect to this locally
+    restart: always
+    networks:
+      - docker-network
+networks:
+  docker-network:
+    driver: bridge

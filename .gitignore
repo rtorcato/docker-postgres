@@ -5,4 +5,4 @@ tmp/
 temp/
 .env
 dist
-pgdata
+pg-data
