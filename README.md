@@ -1,2 +1,1 @@
-# postgres-docker
-postgres-docker
+# Postgres for Docker
